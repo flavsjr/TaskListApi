@@ -1,0 +1,37 @@
+<mvc:View
+  controllerName="myui5app.controller.Detail"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:layout="sap.ui.layout.form"
+  displayBlock="true">
+
+  <Page title="{taskModel>/title}" showNavButton="true" navButtonPress="onNavBack">
+    <content>      
+      <layout:SimpleForm
+        id="detailForm"
+        editable="false"
+        layout="ResponsiveGridLayout"
+        labelSpanL="3"
+        labelSpanM="3"
+        labelSpanS="12"
+        columnsL="1"
+        columnsM="1"
+        maxContainerCols="1"
+        class="sapUiResponsiveMargin">
+        
+        <Label text="ID" />
+        <Text text="{taskModel>/id}" />
+
+        <Label text="Título" />
+        <Text text="{taskModel>/title}" />
+
+        <Label text="Usuário" />
+        <Text text="{taskModel>/userId}" />
+
+        <Label text="Completa" />
+        <CheckBox selected="{taskModel>/completed}" enabled="false" />
+        
+      </layout:SimpleForm>
+    </content>
+  </Page>
+</mvc:View>

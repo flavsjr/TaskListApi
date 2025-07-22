@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Task List SAPUI5</title>
+  <script id="sap-ui-bootstrap" src="https://sdk.openui5.org/resources/sap-ui-core.js" data-sap-ui-theme="sap_fiori_3"
+    data-sap-ui-libs="sap.m" data-sap-ui-resourceroots='{
+      "myui5app": "./"
+    }' data-sap-ui-onInit="module:myui5app/Component" data-sap-ui-async="true" data-sap-ui-autoboot="false">
+    </script>
+
+  <script>
+    sap.ui.getCore().attachInit(function () {
+      new sap.ui.core.ComponentContainer({
+        name: "myui5app",
+        settings: { id: "app" },
+        async: true
+      }).placeAt("content");
+    });
+  </script>
+</head>
+<body class="sapUiBody" id="content"></body>
+</html>

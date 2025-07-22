@@ -1,0 +1,48 @@
+<mvc:View
+  controllerName="myui5app.controller.Main"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  displayBlock="true">
+
+  <App id="app">
+    <pages>
+      <Page title="Lista de Tarefas" showFooter="true">
+        <content>
+          <SearchField
+            liveChange="onSearch"
+            width="100%"
+            placeholder="Pesquisar tarefas..." />
+
+          <Table id="taskTable" items="{tasks>/todos}" inset="false">
+            <columns>
+              <Column><Text text="ID" /></Column>
+              <Column><Text text="Título" /></Column>
+              <Column><Text text="Usuário" /></Column>
+              <Column><Text text="Completa?" /></Column>
+              <Column><Text text="Ações" /></Column>
+            </columns>
+
+            <items>
+              <ColumnListItem type="Active">
+                <cells>
+                  <Text text="{tasks>id}" />
+                  <Text text="{tasks>title}" />
+                  <Text text="{tasks>userId}" />
+                  <CheckBox selected="{tasks>completed}" enabled="false" />
+                  <Button text="Detalhes" press="onPressDetails" />
+                </cells>
+              </ColumnListItem>
+            </items>
+          </Table>
+        </content>
+        <footer>
+          <Toolbar>
+            <Button id="btnPrev" text="Anterior" press="onPrevPage" enabled="false" />
+            <Button id="btnNext" text="Próximo" press="onNextPage" enabled="false" />
+          </Toolbar>
+        </footer>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>
