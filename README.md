@@ -21,7 +21,6 @@ Este projeto consiste em uma API RESTful desenvolvida em ASP.NET Core e um front
     * `GET /todos/{id}`: Retorna os detalhes de uma tarefa específica.
 * **Fonte de Dados Configurável:**
     * **Proxy Remoto:** Consome dados diretamente de `https://jsonplaceholder.typicode.com/todos`.
-    * **(Bônus) Persistência Local:** Opção para armazenar dados localmente via Entity Framework Core (SQLite/InMemory).
 * **Frontend SAP UI5:**
     * Exibição da lista de tarefas.
     * Funcionalidade de pesquisa por título.
@@ -81,7 +80,7 @@ Certifique-se de ter instalado em sua máquina:
     ```
     Isso iniciará o servidor de desenvolvimento da UI5 e abrirá a aplicação no seu navegador padrão (geralmente em `http://localhost:8080` ou similar).
 
-### 3. Executar Testes (Opcional)
+### 3. Executar Testes:
 
 1.  **Navegar para a pasta de Testes:**
     ```bash
@@ -92,10 +91,7 @@ Certifique-se de ter instalado em sua máquina:
     ```bash
     dotnet test
     ```
-
-## 🤝 Contribuição
-
-Contribuições são bem-vindas! Se você tiver sugestões, melhorias ou encontrar bugs, sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*.
+    
 
 ## 📄 Licença
 
